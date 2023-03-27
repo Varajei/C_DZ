@@ -38,10 +38,13 @@ int y = int.Parse(Console.ReadLine());
 int z = int.Parse(Console.ReadLine());
 
 int max = x;
+int min = x;
 {
     max = Math.Max(x, Math.Max(y, z));
+    min = Math.Min(x, Math.Min(y, z));
 }
 Console.WriteLine(max);
+Console.WriteLine(min);
 
 //         int max = 0;
 //         int min = 0;
