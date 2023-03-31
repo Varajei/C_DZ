@@ -6,25 +6,25 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите пятизначное число: ");
-string number = Console.ReadLine();
-int len = number.Length;
+// Console.WriteLine("Введите пятизначное число: ");
+// string number = Console.ReadLine();
+// int len = number.Length;
 
-if (len == 5)
-{
-    if (number[0] == number[4] && number[1] == number[3])
-    {
-        Console.WriteLine($"{number} - Палиндром");
-    }
-    else
-    {
-        Console.WriteLine($"{number} - НЕ палиндром");
-    }
-}
-else
-{
-    Console.WriteLine($"ОШИБКА: {number} - не является пятизначным");
-}
+// if (len == 5)
+// {
+//     if (number[0] == number[4] && number[1] == number[3])
+//     {
+//         Console.WriteLine($"{number} - Палиндром");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"{number} - НЕ палиндром");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine($"ОШИБКА: {number} - не является пятизначным");
+// }
 
 // Задача 21
 
@@ -47,10 +47,10 @@ double Y2 = double.Parse(Console.ReadLine());
 Console.WriteLine("Enter Z2");
 double Z2 = double.Parse(Console.ReadLine());
 
-double len = Math.Sqrt((X2 - X1)*(X2 - X1) + (Y2 - Y1)*(Y2 - Y1) + (Z2 - Z1)*(Z2 - Z1)); 
-// double len = (Math.Pow(X2 - X1),2) + (Math.Pow(Y2 - Y1),2) + (Math.Pow(Z2 - Z1),2); // Math.Pow не сработало - выдает ошибку, на сеиминаре почему то было аналогично
+// double len = Math.Sqrt((X2 - X1)*(X2 - X1) + (Y2 - Y1)*(Y2 - Y1) + (Z2 - Z1)*(Z2 - Z1)); 
+double len = Math.Pow((X2 - X1),2) + Math.Pow((Y2 - Y1),2) + Math.Pow((Z2 - Z1),2); // Math.Pow не сработало - выдает ошибку, на сеиминаре почему то было аналогично
 
-Console.WriteLine(len);
+Console.WriteLine(Math.Sqrt(len));
 
 // Задача 23
 
@@ -59,16 +59,16 @@ Console.WriteLine(len);
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.Clear ();
-Console.Write("Введите число N: ");
-string strNumN = Console.ReadLine();
-int numN = Convert.ToInt32(strNumN);
-int count = 1;
+// Console.Clear ();
+// Console.Write("Введите число N: ");
+// string strNumN = Console.ReadLine();
+// int numN = Convert.ToInt32(strNumN);
+// int count = 1;
 
-Console.WriteLine($"Квадраты чисел от 1 до {numN}:");
-while (count <= numN)
-{
-    Console.Write($" {Math.Pow((count), 3)} ");
-    count++;
-}
-Console.WriteLine();
+// Console.WriteLine($"Квадраты чисел от 1 до {numN}:");
+// while (count <= numN)
+// {
+//     Console.Write($" {Math.Pow((count), 3)} ");
+//     count++;
+// }
+// Console.WriteLine();
