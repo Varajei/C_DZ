@@ -5,23 +5,23 @@
 
 // 2, 4 -> 16
 
-// Console.Write("Введите первое число: ");
-// string strNum1 = Console.ReadLine();
-// int num1 = Convert.ToInt32(strNum1);
+Console.Write("Введите первое число: ");
+string strNum1 = Console.ReadLine();
+int num1 = Convert.ToInt32(strNum1);
 
-// Console.Write("Введите второе число: ");
-// string strNum2 = Console.ReadLine();
-// int num2 = Convert.ToInt32(strNum2);
+Console.Write("Введите второе число: ");
+string strNum2 = Console.ReadLine();
+int num2 = Convert.ToInt32(strNum2);
 
-// int GetArrey(int num1, int num2)
-// {
-//     int GetArrey = 1;
-//     for (int i = 0; i < num2; i++)
-//     {
-//         GetArrey *= num1;
-//     }
-//     return GetArrey;
-// }
+int GetArrey(int num1, int num2)
+{
+    int GetArrey = 1;
+    for (int i = 0; i < num2; i++)
+    {
+        GetArrey *= num1;
+    }
+    return GetArrey;
+}
 
 // Console.WriteLine($"Число {num1} в степени {num2} равно {GetArrey(num1, num2)}");
 
@@ -33,21 +33,21 @@
 
 // 9012 -> 12
 
-// Console.Write("Введите число: ");
-// string strNum = Console.ReadLine();
-// int num = Convert.ToInt32(strNum);
+Console.Write("Введите число: ");
+string strNum = Console.ReadLine();
+int num = Convert.ToInt32(strNum);
 
-// int SumNum(int num)
-// {
-//     int result = 0;
-//     while(num > 0)
-//     {
-//         result += num % 10;
-//         num = num / 10;
-//         //SumNum++;
-//     }
-//     return result;
-// }
+int SumNum(int num)
+{
+    int result = 0;
+    while(num > 0)
+    {
+        result += num % 10;
+        num = num / 10;
+        //SumNum++;
+    }
+    return result;
+}
 
 // Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
 
@@ -87,8 +87,8 @@ void PrArrey(int[] result)
     Console.Write("]");
 }
 
-// int size = Prompt("Введите длину массива: ");
-// int min = Prompt("Начальное значение: ");
-// int max = Prompt("Конечное значение: ");
-// int result = GetArray(size, min, max);
-// PrArrey(result);
+int size = Prompt("Введите длину массива: ");
+int min = Prompt("Начальное значение: ");
+int max = Prompt("Конечное значение: ");
+int result = GetArray(size, min, max);
+PrArrey(result);
