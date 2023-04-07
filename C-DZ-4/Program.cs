@@ -33,23 +33,23 @@
 
 // 9012 -> 12
 
-Console.Write("Введите число: ");
-string strNum = Console.ReadLine();
-int num = Convert.ToInt32(strNum);
+// Console.Write("Введите число: ");
+// string strNum = Console.ReadLine();
+// int num = Convert.ToInt32(strNum);
 
-int SumNum(int num)
-{
-    int result = 0;
-    while(num > 0)
-    {
-        result += num % 10;
-        num = num / 10;
-        //SumNum++;
-    }
-    return result;
-}
+// int SumNum(int num)
+// {
+//     int result = 0;
+//     while(num > 0)
+//     {
+//         result += num % 10;
+//         num = num / 10;
+//         //SumNum++;
+//     }
+//     return result;
+// }
 
-Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
+// Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
@@ -57,3 +57,38 @@ Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
 
 // 6, 1, 33 -> [6, 1, 33]
 
+
+// int Prompt(string message);
+
+Console.Write("message");
+string Read = Console.ReadLine();
+int result = int.Parse(Read);
+return result;
+
+
+int[] GetArray(int size, int minValue, int maxValue)
+{
+    int[] result = new int [size];
+    Random rnd = new Random();
+    for(int i = 0; i < size; i++)
+        result[i] = rnd.Next(minValue, maxValue + 1);
+   
+    return result;
+}
+
+void PrArrey(int[] result)
+{
+    Console.Write("[");
+    for (int i = 0; i < result.size; i++)
+    {
+        Console.Write($"{result[i]}, ");
+    }
+    Console.Write($"{result[result.size - 1]}");
+    Console.Write("]");
+}
+
+// int size = Prompt("Введите длину массива: ");
+// int min = Prompt("Начальное значение: ");
+// int max = Prompt("Конечное значение: ");
+// int result = GetArray(size, min, max);
+// PrArrey(result);
