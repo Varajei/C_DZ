@@ -5,35 +5,25 @@
 
 // 2, 4 -> 16
 
-Console.Write("Введите первое число: ");
-string strNum1 = Console.ReadLine();
-int num1 = Convert.ToInt32(strNum1);
+// Console.Write("Введите первое число: ");
+// string strNum1 = Console.ReadLine();
+// int num1 = Convert.ToInt32(strNum1);
 
-Console.Write("Введите второе число: ");
-string strNum2 = Console.ReadLine();
-int num2 = Convert.ToInt32(strNum2);
+// Console.Write("Введите второе число: ");
+// string strNum2 = Console.ReadLine();
+// int num2 = Convert.ToInt32(strNum2);
 
-int GetArrey(int num1, int num2)
-{
-    int GetArrey = 1;
-    for (int i = 0; i < num2; i++)
-    {
-        GetArrey *= num1;
-    }
-    return GetArrey;
-}
+// int GetArrey(int num1, int num2)
+// {
+//     int GetArrey = 1;
+//     for (int i = 0; i < num2; i++)
+//     {
+//         GetArrey *= num1;
+//     }
+//     return GetArrey;
+// }
 
-bool BooolArrey(int num2)
-{
-    if (num2 < 0)
-    {
-        Console.WriteLine("Больше нуля");
-        return false;
-    }
-    return true;
-}
-
-Console.WriteLine($"Число {num1} в степени {num2} равно {GetArrey(num1, num2)}");
+// Console.WriteLine($"Число {num1} в степени {num2} равно {GetArrey(num1, num2)}");
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
@@ -43,8 +33,23 @@ Console.WriteLine($"Число {num1} в степени {num2} равно {GetAr
 
 // 9012 -> 12
 
+Console.Write("Введите число: ");
+string strNum = Console.ReadLine();
+int num = Convert.ToInt32(strNum);
 
+int SumNum(int num)
+{
+    int result = 0;
+    while(num > 0)
+    {
+        result += num % 10;
+        num = num / 10;
+        //SumNum++;
+    }
+    return result;
+}
 
+Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
