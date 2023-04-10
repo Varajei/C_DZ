@@ -3,6 +3,15 @@
 
 // [345, 897, 568, 234] -> 2
 
+Console.Write("Размер массива: ");
+int length = int.Parse(Console.ReadLine());
+Console.Write("Минимальное значение массива: ");
+int min=int.Parse(Console.ReadLine());
+Console.Write("Максимальное значение массива: ");
+int max=int.Parse(Console.ReadLine());
+int[] Array = GetArray(length, min, max);
+Console.WriteLine($"[{string.Join(", ", Array)}]");
+NewArray(Array);
 
 int[] GetArray(int length, int minValue, int maxValue)
 {
@@ -13,15 +22,19 @@ int[] GetArray(int length, int minValue, int maxValue)
     return result;
 }
 
-int[] NewArray(int[] array)
+void NewArray(int[] Array)
 {
-    
+    int chet = 0;
+    for (int i = 0; i < Array.Length; i++)
+    {
+        if (Array[i] % 2 == 0)
+        {
+            chet = chet + 1;
+        }
+    }
+    Console.WriteLine($"Количество четных чисел = {chet}");
 }
 
-int[] array = GetArray(5, 100, 999); // 5 это количество элементов массива
-Console.Clear();
-Console.WriteLine(string.Join(", ", array));
-Console.WriteLine(string.Join(", ", NewArray(array)));
 
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
