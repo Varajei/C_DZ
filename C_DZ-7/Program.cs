@@ -9,37 +9,37 @@
 
 // 8 7,8 -7,1 9
 
-// float[,] GetArrey(int hight, int length, int min, int max)
-// {
-//     float[,] DubArrey = new float[hight, length];
+float[,] GetArrey(int hight, int length, int min, int max)
+{
+    float[,] DubArrey = new float[hight, length];
 
-//     for (int i = 0; i < hight; i++)
-//     {
-//         for (int j = 0; j < length; j++)
-//         {
-//             DubArrey[i, j] = new Random().Next(min, max);
-//             DubArrey[i, j] *= new Random().NextSingle();
+    for (int i = 0; i < hight; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            DubArrey[i, j] = new Random().Next(min, max);
+            DubArrey[i, j] *= new Random().NextSingle();
 
-//         }
-//     }
+        }
+    }
 
-//     return DubArrey;
-// }
+    return DubArrey;
+}
 
-// void PrintArrey(float[,] myArray)
-// {
-//     for (int i = 0; i < myArray.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < myArray.GetLength(1); j++)
-//         {
-//             Console.Write($"{myArray[i, j]:f1} ");
-//         }
-//         Console.WriteLine();
-//     }
-//     }
-// float[,] myfloatArray = GetArrey(3, 4, -10, 10);
-// PrintArrey(myfloatArray);
-// Console.WriteLine();
+void PrintArrey(float[,] myArray)
+{
+    for (int i = 0; i < myArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < myArray.GetLength(1); j++)
+        {
+            Console.Write($"{myArray[i, j]:f1} ");
+        }
+        Console.WriteLine();
+    }
+    }
+float[,] myfloatArray = GetArrey(3, 4, -10, 10);
+PrintArrey(myfloatArray);
+Console.WriteLine();
 
 
 // Задача 50. Напишите программу, которая на вход принимает элемент в двумерном массиве, и возвращает его индексы первого найденого числа или же указание,
@@ -87,10 +87,6 @@ Console.WriteLine(result);
 
 
 
-
-
-
-
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 // Например, задан массив:
 // 1 4 7 2
@@ -98,26 +94,26 @@ Console.WriteLine(result);
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-// Random random = new Random();
-// int[,] arr = new int[random.Next(3, 10), random.Next(3, 10)];
-// for (int i = 0; i < arr.GetLength(0); i++)
-// {
-//     for (int j = 0; j < arr.GetLength(1); j++)
-//     {
-//         arr[i, j] = random.Next(1, 10);
-//         Console.Write(arr[i, j] + " ");
-//     }
-//     Console.WriteLine();
-// }
-// Console.WriteLine("Среднее арифметическое каждого столбца: ");
-// for (int j = 0; j < arr.GetLength(1); j++)
-// {
-//     double sum = 0;
-//     for (int i = 0; i < arr.GetLength(0); i++)
-//     {
-//         sum += arr[i, j];
+Random random = new Random();
+int[,] arr = new int[random.Next(3, 10), random.Next(3, 10)];
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        arr[i, j] = random.Next(1, 10);
+        Console.Write(arr[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("Среднее арифметическое каждого столбца: ");
+for (int j = 0; j < arr.GetLength(1); j++)
+{
+    double sum = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        sum += arr[i, j];
 
-//     }
-//     Console.Write($"{(sum/arr.GetLength(0)):f1} ");
-// }
+    }
+    Console.Write($"{(sum/arr.GetLength(0)):f1} ");
+}
 
