@@ -9,7 +9,37 @@
 
 // 8 7,8 -7,1 9
 
+double[,] GetArrey(int hight, int length, int min, int max)
+{
+    double[,] DubArrey = new double[hight, length];
 
+    for (int i = 0; i < hight; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            DubArrey[i, j] = new Random().Next(min, max);
+            DubArrey[i, j] *= new Random().NextSingle();
+
+        }
+    }
+
+    return DubArrey;
+}
+
+void PrintArrey(double[,] myArray)
+{
+    for (int i = 0; i < myArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < myArray.GetLength(1); j++)
+        {
+            Console.Write($"{myArray[i, j]:f2} ");
+        }
+        Console.WriteLine();
+    }
+    }
+double[,] mydoubleArray = GetArrey(3, 4, -10, 10);
+PrintArrey(mydoubleArray);
+Console.WriteLine();
 
 
 // Задача 50. Напишите программу, которая на вход принимает элемент в двумерном массиве, и возвращает его индексы первого найденого числа или же указание, что такого элемента нет.
