@@ -23,7 +23,7 @@ int GetArrey(int num1, int num2)
     return GetArrey;
 }
 
-// Console.WriteLine($"Число {num1} в степени {num2} равно {GetArrey(num1, num2)}");
+Console.WriteLine($"Число {num1} в степени {num2} равно {GetArrey(num1, num2)}");
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
@@ -49,7 +49,7 @@ int SumNum(int num)
     return result;
 }
 
-// Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
+Console.WriteLine($"Сумма числа {num} равна {SumNum(num)}");
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
